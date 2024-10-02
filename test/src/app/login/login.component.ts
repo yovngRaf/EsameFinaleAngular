@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
+import { CryptoService } from '../crypto.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService) {
+  constructor(private router: Router, private fb: FormBuilder, private authService: AuthService, private cryptoService: CryptoService) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(2)]]
@@ -36,10 +37,12 @@ export class LoginComponent implements OnInit {
     const username = this.loginForm.get('username')?.value;
     const password = this.loginForm.get('password')?.value;
 
+    
+
     this.authService.authenticate(username, password).subscribe(
       (user) => {
         if (user) {
-          sessionStorage.setItem('userId', user.id);
+          sessionStorage.setItem('userId', this.cryptoService.encrypt(user.id.toString()));
             this.router.navigate(['/clients']);
         } else {
           alert('Credenziali non valide');

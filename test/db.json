@@ -25,6 +25,15 @@
       "azienda": "poppospa",
       "email": "pipo@example.com",
       "userId": 1
+    },
+    {
+      "id": "9b28",
+      "codice_fiscale": "AXM123",
+      "nome": "pippo",
+      "cognome": "paolo",
+      "azienda": "Pipo Spa",
+      "email": "pipo@example.com",
+      "userId": -1
     }
   ]
 }

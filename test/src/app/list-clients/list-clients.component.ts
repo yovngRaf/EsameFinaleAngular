@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ClientService, Client } from '../client.service';
+import { CryptoService } from '../crypto.service';
 
 @Component({
   selector: 'app-list-clients',
@@ -15,7 +16,7 @@ clientForm: FormGroup;
 showForm: boolean = false;
 selectedId: number = -1;
 
-constructor(private clientService: ClientService, private fb: FormBuilder) {
+constructor(private clientService: ClientService, private fb: FormBuilder, private cryptoService: CryptoService) {
   this.clientForm = this.fb.group({
     codice_fiscale: ['', Validators.required],
     nome: ['', Validators.required],
@@ -27,7 +28,7 @@ constructor(private clientService: ClientService, private fb: FormBuilder) {
 id: number = -1;
 ngOnInit(): void {
   //this.getClients();
-  this.id = sessionStorage.getItem('userId') ? parseInt(sessionStorage.getItem('userId')as string) : -1;
+  this.id = this.cryptoService.decrypt(('userId')as string) ? parseInt(this.cryptoService.decrypt('userId')as string) : -1;
   if(this.id != -1){
     this.getClientsById(this.id)
   }
