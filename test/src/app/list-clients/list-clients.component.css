@@ -1,0 +1,66 @@
+button {
+  background-color: blue; 
+  color: white;
+  border: none;
+  border-radius: 5px; 
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; 
+}
+
+
+button:hover {
+  background-color: blueviolet; 
+}
+
+
+form {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  background-color: #f9f9f9; 
+}
+
+/* Stile per i campi di input */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc; /* Bordo grigio */
+  border-radius: 4px; /* Bordo rotondato */
+  font-size: 16px;
+}
+
+/* Messaggi di errore */
+div[ngIf] {
+  color: red;
+  font-size: 14px;
+}
+
+/* Stile per la tabella */
+table {
+  width: 100%;
+  border-collapse: collapse; /* Per rimuovere gli spazi tra le celle */
+}
+
+/* Intestazioni di tabella */
+th {
+  background-color: #f2f2f2; /* Colore dello sfondo delle intestazioni */
+  padding: 10px; /* Padding per le celle delle intestazioni */
+  text-align: left; /* Allineamento del testo */
+}
+
+/* Righe della tabella */
+td {
+  border: 1px solid #ddd; /* Bordo grigio per le celle */
+  padding: 10px; 
+}
+
+
+tr:hover {
+  background-color: #f1f1f1; 
+}

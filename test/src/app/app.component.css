@@ -1,0 +1,13 @@
+
+
+a {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    transition: color 0.3s, font-size 1.0s; /* Aggiunge una transizione fluida */
+}
+
+a:hover {
+    color: #333; /* Colore scuro al passaggio del mouse */
+    font-size: 1.2em; /* Aumenta la grandezza del testo al passaggio del mouse */
+}

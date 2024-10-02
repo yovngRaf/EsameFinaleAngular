@@ -1,0 +1,20 @@
+div {
+    text-align: center;
+}
+
+button {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: blue; /* Colore di base blu */
+    color: white; /* Colore del testo bianco */
+    border: none; /* Rimuovi il bordo predefinito */
+    padding: 10px 20px; /* Aggiungi un po' di padding */
+    cursor: pointer; /* Cambia il cursore a pointer */
+    transition: background-color 0.3s ease; /* Aggiunge un effetto di transizione */
+    border-radius: 15px; /* Rende i bordi arrotondati */
+}
+
+button:hover {
+    background-color: blueviolet; /* Colore di sfondo blu viola al passaggio del mouse */
+}

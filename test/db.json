@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "utente",
+      "password": "Password123"
+    },
+    {
+      "id": "2",
+      "username": "utente2",
+      "password": "Password124"
+    },
+    {
+      "id": "3",
+      "username": "utente3",
+      "password": "Password125"
+    }
+  ],
+  "clients": [
+    {
+      "id": "f521",
+      "codice_fiscale": "AXM123",
+      "nome": "Raf",
+      "cognome": "Pipo",
+      "azienda": "poppospa",
+      "email": "pipo@example.com",
+      "userId": 1
+    }
+  ]
+}
